@@ -1,0 +1,70 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "Abstrax Plugin Registry Definition",
+  "type": "object",
+  "required": ["plugin", "publisher"],
+  "additionalProperties": false,
+  "properties": {
+    "plugin": {
+      "type": "object",
+      "required": ["name", "slug", "display_name", "description", "trust_level", "status"],
+      "additionalProperties": false,
+      "properties": {
+        "name": { "type": "string", "pattern": "^[a-z][a-z0-9-]{0,62}$" },
+        "slug": { "type": "string", "pattern": "^[a-z][a-z0-9-]{0,62}$" },
+        "display_name": { "type": "string", "minLength": 1 },
+        "description": { "type": "string", "minLength": 1 },
+        "long_description": { "type": "string" },
+        "trust_level": { "type": "string", "enum": ["official", "verified", "community"] },
+        "status": { "type": "string", "enum": ["active", "deprecated", "blocked"] },
+        "status_reason": { "type": "string" },
+        "homepage_url": { "type": "string", "format": "uri" },
+        "repository_url": { "type": "string", "format": "uri" },
+        "documentation_url": { "type": "string", "format": "uri" },
+        "license": { "type": "string" },
+        "featured": { "type": "boolean" }
+      }
+    },
+    "publisher": {
+      "type": "object",
+      "required": ["name", "slug"],
+      "additionalProperties": false,
+      "properties": {
+        "name": { "type": "string", "minLength": 1 },
+        "slug": { "type": "string", "pattern": "^[a-z][a-z0-9-]{0,62}$" }
+      }
+    },
+    "versions": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["version", "channel", "requires_abstrax", "binaries"],
+        "additionalProperties": false,
+        "properties": {
+          "version": { "type": "string" },
+          "channel": { "type": "string", "enum": ["stable", "beta", "alpha"] },
+          "protocol_version": { "type": "integer", "minimum": 1 },
+          "requires_abstrax": { "type": "string", "minLength": 1 },
+          "release_date": { "type": "string", "format": "date-time" },
+          "manifest_url": { "type": "string", "format": "uri" },
+          "release_notes_url": { "type": "string", "format": "uri" },
+          "status": { "type": "string", "enum": ["active", "deprecated", "blocked"] },
+          "binaries": {
+            "type": "object",
+            "minProperties": 1,
+            "additionalProperties": {
+              "type": "object",
+              "required": ["url", "sha256", "size"],
+              "additionalProperties": false,
+              "properties": {
+                "url": { "type": "string", "format": "uri" },
+                "sha256": { "type": "string", "pattern": "^[a-f0-9]{64}$" },
+                "size": { "type": "integer", "minimum": 0 }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

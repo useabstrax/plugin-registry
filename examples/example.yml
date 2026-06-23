@@ -1,0 +1,40 @@
+# Reference plugin based on cli/cmd/abstrax-example/main.go
+# Binary URLs are placeholders until official releases are published.
+
+plugin:
+  name: example
+  slug: example
+  display_name: Example Plugin
+  description: Reference plugin and SDK example for Abstrax
+  long_description: |
+    The Example Plugin demonstrates the Abstrax plugin metadata protocol and
+    provides a minimal command for testing plugin installation and dispatch.
+  trust_level: official
+  status: active
+  featured: true
+  homepage_url: https://plugins.useabstrax.com/plugins/example
+  repository_url: https://github.com/useabstrax/abstrax
+  documentation_url: https://useabstrax.com/docs/plugins/creating-a-plugin
+  license: MIT
+
+publisher:
+  name: Abstrax
+  slug: useabstrax
+
+versions:
+  - version: 0.1.0
+    channel: stable
+    protocol_version: 1
+    requires_abstrax: ">=0.1.0"
+    release_date: "2026-06-15T12:00:00Z"
+    manifest_url: https://placeholder.invalid/plugins/example/0.1.0/manifest.json
+    status: active
+    binaries:
+      linux-amd64:
+        url: https://placeholder.invalid/releases/abstrax-example/0.1.0/linux-amd64/abstrax-example
+        sha256: "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa"
+        size: 123456
+      linux-arm64:
+        url: https://placeholder.invalid/releases/abstrax-example/0.1.0/linux-arm64/abstrax-example
+        sha256: "bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb"
+        size: 123456
