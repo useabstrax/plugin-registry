@@ -1,0 +1,64 @@
+# Official Abstrax Composer plugin.
+
+plugin:
+  name: composer
+  slug: composer
+  display_name: Composer Plugin
+  description: Install and manage Composer, and run it with the correct PHP binary
+  long_description: |
+    The Composer Plugin installs Composer on the server, keeps it up to date,
+    and runs it with the correct PHP binary and user. It downloads the stable
+    Composer phar from getcomposer.org, verifies the SHA-256 checksum, and
+    installs a global wrapper at /usr/local/bin/composer.
+
+    Commands include setup, self-update, remove, status, configure, run,
+    diagnose, and auth. PHP is resolved from --php, ABSTRAX_COMPOSER_PHP, the
+    project runtime, a server default, then php. Debian/Ubuntu and RHEL-family
+    are supported.
+  trust_level: official
+  status: active
+  featured: true
+  homepage_url: https://plugins.useabstrax.com/plugins/composer
+  repository_url: https://github.com/useabstrax/composer
+  documentation_url: https://useabstrax.com/docs/plugins/official/composer
+  license: Apache-2.0
+
+publisher:
+  name: Abstrax
+  slug: useabstrax
+
+versions:
+  - version: 0.2.0
+    channel: stable
+    protocol_version: 1
+    requires_abstrax: ">=0.1.0"
+    release_date: "2026-08-19T20:17:21Z"
+    manifest_url: https://github.com/useabstrax/composer/releases/download/v0.2.0/plugin-manifest.json
+    release_notes_url: https://github.com/useabstrax/composer/releases/tag/v0.2.0
+    status: active
+    binaries:
+      linux-amd64:
+        url: https://github.com/useabstrax/composer/releases/download/v0.2.0/abstrax-composer_0.2.0_linux_amd64.tar.gz
+        sha256: "0b92d16e60cb1d2bf37a87439cd4f65834f28d251933f5422a0c95948660e5a1"
+        size: 7409924
+      linux-arm64:
+        url: https://github.com/useabstrax/composer/releases/download/v0.2.0/abstrax-composer_0.2.0_linux_arm64.tar.gz
+        sha256: "f6af0bc1da8c937eb4d9dff5258c46938a6cb4153b7565fe70564fb1d08e7ff7"
+        size: 7143576
+  - version: 0.1.0
+    channel: stable
+    protocol_version: 1
+    requires_abstrax: ">=0.1.0"
+    release_date: "2026-08-19T18:24:52Z"
+    manifest_url: https://github.com/useabstrax/composer/releases/download/v0.1.0/plugin-manifest.json
+    release_notes_url: https://github.com/useabstrax/composer/releases/tag/v0.1.0
+    status: active
+    binaries:
+      linux-amd64:
+        url: https://github.com/useabstrax/composer/releases/download/v0.1.0/abstrax-composer_0.1.0_linux_amd64.tar.gz
+        sha256: "858b6bfac82775942ba3f0e8dd2d84b94d83c9f5c56096cc0f8431e43005589c"
+        size: 7409924
+      linux-arm64:
+        url: https://github.com/useabstrax/composer/releases/download/v0.1.0/abstrax-composer_0.1.0_linux_arm64.tar.gz
+        sha256: "988a0e2b4c2ed7563e10b24ed48075b1ad3b4a5fe6cb8c402e8dbe453df391f9"
+        size: 7143576

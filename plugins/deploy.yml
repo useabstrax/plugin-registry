@@ -1,0 +1,148 @@
+# Official Abstrax Deploy plugin.
+
+plugin:
+  name: deploy
+  slug: deploy
+  display_name: Deploy Plugin
+  description: Zero-downtime GitHub deployments for Abstrax projects
+  long_description: |
+    The Deploy Plugin deploys application code into a Capistrano/Deployer-style
+    layout with per-project releases, an atomic current symlink, and shared
+    paths. Each deploy shallow-clones the configured GitHub repository, runs
+    hooks, health-checks the release, activates it, and prunes old releases.
+
+    Commands include setup, init, configure, key, now, rollback, list, status,
+    and hooks. Presets cover Laravel, Node, Ruby, static, and none. Mutating
+    commands require root. Debian/Ubuntu and RHEL-family are supported.
+  trust_level: official
+  status: active
+  featured: true
+  homepage_url: https://plugins.useabstrax.com/plugins/deploy
+  repository_url: https://github.com/useabstrax/deployments
+  documentation_url: https://useabstrax.com/docs/plugins/official/deploy
+  license: Apache-2.0
+
+publisher:
+  name: Abstrax
+  slug: useabstrax
+
+versions:
+  - version: 0.2.1
+    channel: stable
+    protocol_version: 1
+    requires_abstrax: ">=0.1.0"
+    release_date: "2026-08-19T21:15:54Z"
+    manifest_url: https://github.com/useabstrax/deployments/releases/download/v0.2.1/plugin-manifest.json
+    release_notes_url: https://github.com/useabstrax/deployments/releases/tag/v0.2.1
+    status: active
+    binaries:
+      linux-amd64:
+        url: https://github.com/useabstrax/deployments/releases/download/v0.2.1/abstrax-deploy_0.2.1_linux_amd64.tar.gz
+        sha256: "6c50ed5aa8284c6b0e0c2aa33cc4c7f57e7db9a395fa591822dda55f179a9655"
+        size: 4071684
+      linux-arm64:
+        url: https://github.com/useabstrax/deployments/releases/download/v0.2.1/abstrax-deploy_0.2.1_linux_arm64.tar.gz
+        sha256: "3d637e49738da0e5b9692d87d32d76b6c0588ed055f343f4d42274c06c0d7f0c"
+        size: 3997848
+  - version: 0.2.0
+    channel: stable
+    protocol_version: 1
+    requires_abstrax: ">=0.1.0"
+    release_date: "2026-08-19T20:34:54Z"
+    manifest_url: https://github.com/useabstrax/deployments/releases/download/v0.2.0/plugin-manifest.json
+    release_notes_url: https://github.com/useabstrax/deployments/releases/tag/v0.2.0
+    status: active
+    binaries:
+      linux-amd64:
+        url: https://github.com/useabstrax/deployments/releases/download/v0.2.0/abstrax-deploy_0.2.0_linux_amd64.tar.gz
+        sha256: "23f5f27cec28a266dbba9588b0b11e439941901f7eab9584cf2d6ce4f778c861"
+        size: 4071684
+      linux-arm64:
+        url: https://github.com/useabstrax/deployments/releases/download/v0.2.0/abstrax-deploy_0.2.0_linux_arm64.tar.gz
+        sha256: "ce8078562a6a3dbb7b35ba072007a220fcb057e99ba2a07f5550daed835f310d"
+        size: 3997848
+  - version: 0.1.4
+    channel: stable
+    protocol_version: 1
+    requires_abstrax: ">=0.1.0"
+    release_date: "2026-08-17T23:03:24Z"
+    manifest_url: https://github.com/useabstrax/deployments/releases/download/v0.1.4/plugin-manifest.json
+    release_notes_url: https://github.com/useabstrax/deployments/releases/tag/v0.1.4
+    status: active
+    binaries:
+      linux-amd64:
+        url: https://github.com/useabstrax/deployments/releases/download/v0.1.4/abstrax-deploy_0.1.4_linux_amd64.tar.gz
+        sha256: "cbbd8c7e733f6d6339c6b86fbf074f209ad5b09f1cb23a7a1908c998af49d3e1"
+        size: 4067588
+      linux-arm64:
+        url: https://github.com/useabstrax/deployments/releases/download/v0.1.4/abstrax-deploy_0.1.4_linux_arm64.tar.gz
+        sha256: "67c04c5411fbc3f4b4d2a0f36a869994b9c3f98bf8ed17fde6f1cc91032a1158"
+        size: 3997848
+  - version: 0.1.3
+    channel: stable
+    protocol_version: 1
+    requires_abstrax: ">=0.1.0"
+    release_date: "2026-08-17T22:58:47Z"
+    manifest_url: https://github.com/useabstrax/deployments/releases/download/v0.1.3/plugin-manifest.json
+    release_notes_url: https://github.com/useabstrax/deployments/releases/tag/v0.1.3
+    status: active
+    binaries:
+      linux-amd64:
+        url: https://github.com/useabstrax/deployments/releases/download/v0.1.3/abstrax-deploy_0.1.3_linux_amd64.tar.gz
+        sha256: "4e3b39418721d50b9525dd2cdaa3b5ee16112ff3bd6ffd40a7790ce5528e96f4"
+        size: 4067588
+      linux-arm64:
+        url: https://github.com/useabstrax/deployments/releases/download/v0.1.3/abstrax-deploy_0.1.3_linux_arm64.tar.gz
+        sha256: "128a4997fd39d5a10fd851c97be82fb5f215d0c784795b8fdc8539b6454bae99"
+        size: 3997848
+  - version: 0.1.2
+    channel: stable
+    protocol_version: 1
+    requires_abstrax: ">=0.1.0"
+    release_date: "2026-08-17T22:08:10Z"
+    manifest_url: https://github.com/useabstrax/deployments/releases/download/v0.1.2/plugin-manifest.json
+    release_notes_url: https://github.com/useabstrax/deployments/releases/tag/v0.1.2
+    status: active
+    binaries:
+      linux-amd64:
+        url: https://github.com/useabstrax/deployments/releases/download/v0.1.2/abstrax-deploy_0.1.2_linux_amd64.tar.gz
+        sha256: "bbf6c5ec75f485a84e96d89c7db23c1f1fd2bbd3c8c12cd5b9bf7844619f9122"
+        size: 4055300
+      linux-arm64:
+        url: https://github.com/useabstrax/deployments/releases/download/v0.1.2/abstrax-deploy_0.1.2_linux_arm64.tar.gz
+        sha256: "0fb21de4592852c1ebf112d130dc0965272bf9f8c47acad62edc0c149c303fbc"
+        size: 3997848
+  - version: 0.1.1
+    channel: stable
+    protocol_version: 1
+    requires_abstrax: ">=0.1.0"
+    release_date: "2026-08-17T21:59:31Z"
+    manifest_url: https://github.com/useabstrax/deployments/releases/download/v0.1.1/plugin-manifest.json
+    release_notes_url: https://github.com/useabstrax/deployments/releases/tag/v0.1.1
+    status: active
+    binaries:
+      linux-amd64:
+        url: https://github.com/useabstrax/deployments/releases/download/v0.1.1/abstrax-deploy_0.1.1_linux_amd64.tar.gz
+        sha256: "5516c0374549699773baf1d20ed551b081877af3c9197008668ad21cfc894292"
+        size: 4055300
+      linux-arm64:
+        url: https://github.com/useabstrax/deployments/releases/download/v0.1.1/abstrax-deploy_0.1.1_linux_arm64.tar.gz
+        sha256: "a13c554b3efc6ca60268c3800a8b97f02b0a44ec94f85fccd010a0647f0823a2"
+        size: 3997848
+  - version: 0.1.0
+    channel: stable
+    protocol_version: 1
+    requires_abstrax: ">=0.1.0"
+    release_date: "2026-08-17T21:04:31Z"
+    manifest_url: https://github.com/useabstrax/deployments/releases/download/v0.1.0/plugin-manifest.json
+    release_notes_url: https://github.com/useabstrax/deployments/releases/tag/v0.1.0
+    status: active
+    binaries:
+      linux-amd64:
+        url: https://github.com/useabstrax/deployments/releases/download/v0.1.0/abstrax-deploy_0.1.0_linux_amd64.tar.gz
+        sha256: "13eeb67a64a9b0e32f360be55f8cbbe757e56778b8e46883370800821982ae85"
+        size: 4055300
+      linux-arm64:
+        url: https://github.com/useabstrax/deployments/releases/download/v0.1.0/abstrax-deploy_0.1.0_linux_arm64.tar.gz
+        sha256: "cecc291bbddf89ed82da9cb25292a1521f538c52aab343cc95b3080feed1ec68"
+        size: 3997848

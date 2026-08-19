@@ -107,9 +107,9 @@ versions:
 - **Platforms:** only `linux-amd64` and `linux-arm64` are supported.
 - **URLs:** production release and manifest URLs must use HTTPS.
 - **Trust level:** third-party submissions should use `trust_level: community`. The `official` level is reserved for plugins published by Abstrax.
-- **Reserved names:** the following plugin names cannot be used because they conflict with built-in Abstrax commands: `version`, `self`, `doctor`, `config`, `user`, `ssh-key`, `ssh`, `package`, `service`, `cron`, `daemon`, `project`, `web`, `ssl`, `mysql`, `cache`, `firewall`, `server`, `log`, `agent`, `plugin`.
+- **Reserved names:** the following plugin names cannot be used because they conflict with built-in Abstrax commands: `version`, `self`, `doctor`, `config`, `user`, `ssh-key`, `ssh`, `package`, `service`, `cron`, `daemon`, `project`, `web`, `ssl`, `mysql`, `cache`, `firewall`, `server`, `log`, `plugin`.
 
-Field definitions and enums are in [`schema.json`](schema.json). Working examples are in [`examples/example.yml`](examples/example.yml) and [`examples/deploy.yml`](examples/deploy.yml).
+Field definitions and enums are in [`schema.json`](schema.json). Working examples are in [`examples/example.yml`](examples/example.yml).
 
 ## Review
 
